@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/mmbuw-courses/se-ss20-exercise-1.svg?token=vuni5zSQUmyYTd2SHV6a&branch=master)](https://travis-ci.com/mmbuw-courses/se-ss20-exercise-1)
+[![Build Status](https://travis-ci.com/mmbuw-courses/se-sose20-exercise-1.svg?token=vuni5zSQUmyYTd2SHV6a&branch=master)](https://travis-ci.com/mmbuw-courses/se-sose20-exercise-1)
 
 ## Software Engineering Summer Semester 2020: ray-tracing in java  
 
