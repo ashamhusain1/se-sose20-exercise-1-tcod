@@ -29,10 +29,8 @@ application {
 // }
 
 task(score, dependsOn: 'classes', type: JavaExec) {
-    main = 'score'
-    classpath = sourceSets.main.runtimeClasspath
-    //args ''
-    //systemProperty '', ''
+        main = 'score'
+        classpath = sourceSets.main.runtimeClasspath
 }
 
 repositories {

@@ -1,19 +1,19 @@
 [![Build Status](https://travis-ci.com/mmbuw-courses/se-sose20-exercise-1.svg?token=vuni5zSQUmyYTd2SHV6a&branch=master)](https://travis-ci.com/mmbuw-courses/se-sose20-exercise-1)
 
-## Software Engineering Summer Semester 2020: ray-tracing in java  
+## Software Engineering Summer Semester 2020: ray-tracing in java
 
-`n.b.` 
+`n.b.`
 
 The commands provided as part of this instructional readme need to
 be run using a terminal within the repository root directory.
 
-- [x] [ *Nix terminal ](https://en.wikipedia.org/wiki/Unix_shell) (macOS, Linux distributions, etc.) 
+- [x] [ *Nix terminal ](https://en.wikipedia.org/wiki/Unix_shell) (macOS, Linux distributions, etc.)
 - [x] [ Git Bash ](https://gitforwindows.org) terminal (for Windows)
 #
 
 Clone the repository using:
 ```
-git clone git@github.com:mmbuw-courses/se-sose20-raytracer-2.git 
+git clone git@github.com:mmbuw-courses/se-sose20-exercise-1.git
 ```
 
 * [ Getting started: ](#start) <br/>
@@ -24,33 +24,34 @@ git clone git@github.com:mmbuw-courses/se-sose20-raytracer-2.git
 
 * [ Continuous integration: ](#ci) <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; → [ working with Travis ](#travis) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ cumulative raytracer distribution and running updates ](#updates) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ raytracer scores and issues ](#scores) <br/>
+&nbsp;&nbsp;&nbsp;&nbsp; → [ updating the starter code ](#updates) <br/>
 
 * [ Exercise resources ](#res) <br/>
 
 <a name="start"></a>
 ## Getting started
-This ray tracing raytracer is a practical approach to learning and practicing foundational java language aspects.
+This ray tracing exercise is a practical approach to learning and practicing foundational java language aspects.
 
-Each coding raytracer is designed for [ Test Driven Development ](https://en.wikipedia.org/wiki/Test-driven_development) ([ TDD ](https://en.wikipedia.org/wiki/Test-driven_development)).
+We will use [ Test Driven Development ](https://en.wikipedia.org/wiki/Test-driven_development) ([ TDD ](https://en.wikipedia.org/wiki/Test-driven_development))
+to complete each assignment.
+
+Therefore, each exercise comes with starter code, with ***FAILING*** test cases as a guideline.
+
+The aim here, is to implement code such that the tests will ***PASS***.
+As such, each exercise is scored based on ***PASSING TESTS***.
 
 ![ TDD ](resources/images/tdd.png)
 
-As such, each raytracer is scored based on ***PASSING TESTS***.
 
-Each raytracer comes with starter code, i.e., an raytracer repository with minimal code and 
-***FAILING TEST CASES***. The goal here is complete the raytracer using the test cases, ensuring full functionality.
-
-The tests cases are open to improvement, iff there is no mutation of the intended test behaviour. 
+The tests cases are open to improvement, iff there is no mutation of the intended test behaviour.
 However as a general note, we recommend using the test cases as they are without introducing any modifications.
 
 
-Please note, throughout the completion and submission of theses exercises, 
+Please note, throughout the completion and submission of theses exercises,
 any academic dishonesty and breach of ethics will incur penalty.
 
-[Plagiarism](https://en.wikipedia.org/wiki/Plagiarism#cite_note-RandomHouse95-1) is the representation of another 
-author's language, thoughts, ideas, or expressions as one's own. 
+[Plagiarism](https://en.wikipedia.org/wiki/Plagiarism#cite_note-RandomHouse95-1) is the representation of another
+author's language, thoughts, ideas, or expressions as one's own.
 
 <a name="dep"></a>
 ### Dependencies
@@ -62,36 +63,45 @@ Any higher JDK version will work just we all!
 
 <a name="run"></a>
 ### Running, Testing, and generating Evaluation Reports
-*To run the application, use:*
+*To run the main application, use:*
 ```
 gradle run
 ```
-*To test the application using the test suite, use:*
+
+*To test the application (using the provided test suite) use:*
 ```
 gradle test
-``` 
-*To generate a self evaluation report, use: (feature in dev)*
+```
+
+*To generate a test case score (mark allocation based on passing tests), use:
 ```
 gradle score
 ```
+`n.b.`
 
-`Tip:` 
+This is an experimental feature still under development!
+
+`Tip:`
 ```
-gradle build  # for efficient local run + test cycles
+gradle clean
+gradle build
 ```
+Running `gradle build` is the same as running `gradle run` and `gradle test`.
+
+This may come in handy in your own local development cycles.
 
 <a name="who"></a>
 ## Continuous integration
 Continuous Integration or [CI](https://codeship.com/continuous-integration-essentials)
-is a development practice where developers integrate code into a shared repository frequently, 
-preferably several times a day. 
+is a development practice where developers integrate code into a shared repository frequently,
+preferably several times a day.
 CI does not get rid of bugs, but however,
 it does make them dramatically easier to find and remove!
 
-As the main goal is to build a simple ray tracer using successive exercises, 
-it is **imperative** to always have a solution for the previous raytracer.
-For this reason, 
-each new raytracer will be presented with a sample solution for the previous raytracer.
+As the main goal is to build a simple ray tracer using successive exercises,
+it is **imperative** to always have a solution for the previous exercise.
+For this reason,
+each new exercise will be presented with a sample solution for the previous exercise.
 
 Simply put;
 
@@ -106,15 +116,15 @@ Exercise 4 (presented with Exercise 1 & 2 & 3 sample solutions)
 ... *and so on*
 
 Please note, it is not mandatory to use the sample solutions, in fact, its is highly recommended and encouraged to use your own solutions!
- 
+
 <a name="travis"></a>
 ### Working with Travis
-We will use the Travis CI for building and testing on Github 
+We will use the Travis CI for building and testing on Github
 
-The [build status](https://travis-ci.com/mmbuw-courses/se-ws19-exercise-6.svg?token=vuni5zSQUmyYTd2SHV6a&branch=master) 
+The [build status](https://travis-ci.com/mmbuw-courses/se-ws19-exercise-6.svg?token=vuni5zSQUmyYTd2SHV6a&branch=master)
 badge (highlighted in red below) provides a visual indication of the current build, and whether or not it is currently passing.
 
-`n.b.` 
+`n.b.`
 
 checking the build status here is an unnecessary formality iff local tests have been run and found to pass successfully.
 
@@ -127,27 +137,27 @@ If the build is failing, click on the badge to get a detailed report of why the 
 ![Travis debugging](resources/images/debug.png)
 
 <a name="updates"></a>
-### Updating the Exercise Repository
-The raytracer starter code may be updated after it has been released ( i.e., for bug fixes, clarification, comments, hints, etc.). 
+### Updating the Exercise starter code ( <-- IMPORTANT)
+The exercise starter code may be updated after it has been released ( i.e., for bug fixes, clarification, comments, hints, etc.).
 
-In this particular case, it is necessary to merge the latest starter code update to ensure you have the current raytracer starter code, 
+In this particular case, it is necessary to merge the latest starter code update to ensure you have the current exercise starter code,
 
-To do this, simply add the raytracer repository as a remote:
+To do this, simply add the exercise repository as a remote:
 
 ```
-git remote add upstream https://github.com/mmbuw-courses/se-ws19-raytracer-$NUMBER.git
+git remote add upstream git@github.com:mmbuw-courses/se-sose20-exercise-$NUMBER.git
 ```
-Where $NUMBER corresponds to the Exercise number. E.g., 
+Where $NUMBER corresponds to the Exercise number. E.g.,
 
-for Exercise 1: 
+for Exercise 1:
 ```
-git remote add upstream git@github.com:mmbuw-courses/se-sose20-raytracer-1.git
+git remote add upstream git@github.com:mmbuw-courses/se-sose20-exercise-1.git
 ```
-for Exercise 2: 
+for Exercise 2:
 ```
-git remote add upstream git@github.com:mmbuw-courses/se-sose20-raytracer-2.git
+git remote add upstream git@github.com:mmbuw-courses/se-sose20-exercise-2.git
 ```
-**P.S., this need only be done once per raytracer repository!**
+**P.S., this need only be done once per exercise repository!**
 
 Once done, update
 
@@ -159,4 +169,4 @@ Resolving merge conflicts is inevitable and this is the perfect opportunity to g
 
 <a name="res"></a>
 ## Exercise Resources
-All raytracer resources are available in the `./res directory`.
+All exercise resources are available in the `./resources directory`.
