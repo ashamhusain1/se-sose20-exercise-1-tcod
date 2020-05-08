@@ -1,31 +1,21 @@
 [![Build Status](https://travis-ci.com/mmbuw-courses/se-sose20-exercise-1.svg?token=vuni5zSQUmyYTd2SHV6a&branch=master)](https://travis-ci.com/mmbuw-courses/se-sose20-exercise-1)
 
-## Software Engineering Summer Semester 2020: ray-tracing in java
+# Software Engineering Summer Semester 2020
 
-`n.b.`
+- [ General Information ](#general-information)
+- [ Getting Started ](#getting-started)
+  - [ Prerequisites ](#prerequisites)
+  - [ Running ](#running-testing-and-generating-evaluation-reports)
+  - [ Testing ](#running-testing-and-generating-evaluation-reports)
+  - [ Generating an evaluation report ](#running-testing-and-generating-evaluation-reports)
+- [ Continuous integration: ](#continuous-integration)
+  - [ Working with Travis ](#working-with-travis)
+  - [ Updating the starter code ](#updating-the-exercise-starter-code-----important)
+- [ Exercise resources ](#exercise-resources)
 
-The commands provided as part of this instructional readme need to
-be run using a terminal within the repository root directory.
+## General Information
 
-- [x] [ *Nix terminal ](https://en.wikipedia.org/wiki/Unix_shell) (macOS, Linux distributions, etc.)
-- [x] [ Git Bash ](https://gitforwindows.org) terminal (for Windows)
-#
-
-* [ Getting started: ](#start) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ dependencies ](#dep) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ running ](#run) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ testing ](#run) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ generating an evaluation report ](#run) <br/>
-
-* [ Continuous integration: ](#ci) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ working with Travis ](#travis) <br/>
-&nbsp;&nbsp;&nbsp;&nbsp; → [ updating the starter code ](#updates) <br/>
-
-* [ Exercise resources ](#res) <br/>
-
-<a name="start"></a>
-## Getting started
-This ray tracing exercise is a practical approach to learning and practicing foundational java language aspects.
+This [ray tracing](https://en.wikipedia.org/wiki/Ray_tracing_(graphics)) exercise is a practical approach to learning and practicing foundational java language aspects.
 
 We will use [ Test Driven Development ](https://en.wikipedia.org/wiki/Test-driven_development) ([ TDD ](https://en.wikipedia.org/wiki/Test-driven_development))
 to complete each assignment.
@@ -46,15 +36,59 @@ any academic dishonesty and breach of ethics will incur penalty.
 [Plagiarism](https://en.wikipedia.org/wiki/Plagiarism#cite_note-RandomHouse95-1) is the representation of another
 author's language, thoughts, ideas, or expressions as one's own.
 
-<a name="dep"></a>
-### Dependencies
+## Getting started
+
+The commands provided as part of this instructional readme need to
+be run using a terminal within the repository root directory.
+
+- [x] [ *Nix terminal ](https://en.wikipedia.org/wiki/Unix_shell) (macOS, Linux distributions, etc.)
+- [x] [ Git Bash ](https://gitforwindows.org) terminal (for Windows)
+
+### Prerequisites
 [JDK11](https://jdk.java.net/11/)
 
 [Gradle](https://gradle.org/install/)
 
 Any higher JDK version will work just we all!
 
-<a name="run"></a>
+### Project Structure
+```bash
+se-sose20-exercise-1
+├── gradle
+│   └── wrapper
+├── out
+│   ├── MainTest.md
+│   ├── PrettyPrintParserTest.md
+│   └── XMLParserTest.md
+├── resources
+|   ├── images
+|   |   └── *.png
+|   ├── foo.xml
+|   ├── scene.x3d
+|   ├── test1.x3d
+|   ├── test2.x3d
+|   └── test3.x3d
+├── src
+|   ├── main
+|   |   └── java
+|   |       ├── raytracer -> Here is space for your implementation
+|   |       |   └── Main.java
+|   |       └── score.java
+|   └── test
+|       └── java
+|           └── raytracer
+|               ├── MainTest.java
+|               ├── PrettyPrintParserTest.java
+|               └── XMLParserTest.java
+├── .classpath
+├── .gitignore
+├── .project
+├── build.gradle
+├── settings.gradle
+└── README.md
+```
+All exercise resources are available in the `./resources directory`.
+
 ### Running, Testing, and generating Evaluation Reports
 *To run the main application, use:*
 ```
@@ -107,7 +141,6 @@ Exercise 4 (presented with Exercise 1 & 2 & 3 sample solutions)
 
 Please note, it is not mandatory to use the sample solutions, in fact, its is highly recommended and encouraged to use your own solutions!
 
-<a name="travis"></a>
 ### Working with Travis
 We will use the Travis CI for building and testing on Github
 
@@ -126,7 +159,6 @@ If the build is failing, click on the badge to get a detailed report of why the 
 
 ![Travis debugging](resources/images/debug.png)
 
-<a name="updates"></a>
 ### Updating the Exercise starter code ( <-- IMPORTANT)
 The exercise starter code may be updated after it has been released ( i.e., for bug fixes, clarification, comments, hints, etc.).
 
@@ -155,8 +187,3 @@ Once done, update
 git pull upstream master
 ```
 Resolving merge conflicts is inevitable and this is the perfect opportunity to get accustomed to developing an approach to merging.
-
-
-<a name="res"></a>
-## Exercise Resources
-All exercise resources are available in the `./resources directory`.
