@@ -11,11 +11,6 @@ be run using a terminal within the repository root directory.
 - [x] [ Git Bash ](https://gitforwindows.org) terminal (for Windows)
 #
 
-Clone the repository using:
-```
-git clone git@github.com:mmbuw-courses/se-sose20-exercise-1.git
-```
-
 * [ Getting started: ](#start) <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; → [ dependencies ](#dep) <br/>
 &nbsp;&nbsp;&nbsp;&nbsp; → [ running ](#run) <br/>
