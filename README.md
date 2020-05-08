@@ -34,9 +34,7 @@ This ray tracing exercise is a practical approach to learning and practicing fou
 
 We will use [ Test Driven Development ](https://en.wikipedia.org/wiki/Test-driven_development) ([ TDD ](https://en.wikipedia.org/wiki/Test-driven_development))
 to complete each assignment.
-
-Therefore, each exercise comes with starter code, with ***FAILING*** test cases as a guideline.
-
+Therefore, each exercise comes with starter code and ***FAILING*** test cases as a guideline.
 The aim here, is to implement code such that the tests will ***PASS***.
 As such, each exercise is scored based on ***PASSING TESTS***.
 
@@ -73,22 +71,19 @@ gradle run
 gradle test
 ```
 
-*To generate a test case score (mark allocation based on passing tests), use:
+To generate a test case score (mark allocation based on passing tests), use:
 ```
 gradle score
 ```
-`n.b.`
-
-This is an experimental feature still under development!
+- This is an experimental feature still under development!
 
 `Tip:`
 ```
 gradle clean
 gradle build
 ```
-Running `gradle build` is the same as running `gradle run` and `gradle test`.
-
-This may come in handy in your own local development cycles.
+Running `gradle build` is the same as running `gradle run` and `gradle test`, which
+may come in handy in your own local development cycles.
 
 <a name="who"></a>
 ## Continuous integration
