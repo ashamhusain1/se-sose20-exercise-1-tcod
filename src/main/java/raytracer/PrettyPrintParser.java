@@ -1,5 +1,8 @@
 package raytracer;
 
+import javax.xml.stream.events.EndElement;
+import javax.xml.stream.events.StartElement;
+
 public class PrettyPrintParser extends XMLParser{
 
 	public PrettyPrintParser(String fileName) {
@@ -8,12 +11,12 @@ public class PrettyPrintParser extends XMLParser{
 	}
 	
 	@Override
-	public void enter(String tagName) {
+	public void enter(StartElement startElement) {
 		//TODO Implementation
 	}
 	
 	@Override
-	public void exit(String tagName) {
+	public void exit(EndElement endElement) {
 		//TODO implementation
 	}
 
