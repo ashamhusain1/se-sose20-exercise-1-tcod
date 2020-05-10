@@ -1,37 +1,29 @@
 package raytracer;
 
-import javax.xml.stream.events.EndElement;
-import javax.xml.stream.events.StartElement;
+import java.util.ArrayList;
 
-public class PrettyPrintParser extends XMLParser{
+public class Main {
 	
-	private int depth = 0; // Depth of indentation
-
-	/**
-	 * Constructor.
-	 * @param fileName
-	 */
-	public PrettyPrintParser(String fileName) {
-		super(fileName);
-	}
+	static final String PATH = "./resources/"; // Common prefix for the files.
 	
-	@Override
-	public void enter(StartElement startElement) {
-		for (int i = 0; i < this.depth; i++) {
-			System.out.print("    "); // Printing a tab space for indentation.
+	public static void main(String [] args) throws Exception {
+		
+		ArrayList<String> files = new ArrayList<String>();
+		files.add("foo.xml");
+		files.add("scene.x3d");
+		files.add("test1.x3d");
+		files.add("test2.x3d");
+		files.add("test3.x3d");
+		for (int i = 0; i < files.size(); i++) {
+			String file = PATH + files.get(i); // Path to file.
+			
+			// Object of XMLParser class which can call the parse method.
+			XMLParser docXML = new XMLParser(file);
+			docXML.parse();
+			
+			// Object of PrettyPrintParser class which can call the parse method.
+			PrettyPrintParser docPPP = new PrettyPrintParser(file);
+			docPPP.parse();
 		}
-		System.out.print("→");
-		System.out.println(startElement.getName());
-		this.depth++; // Incrementing the depth.
-	}
-	
-	@Override
-	public void exit(EndElement endElement) {
-		this.depth--; // Decrementing the depth.
-		for (int i = 0; i < this.depth; i++) {
-			System.out.print("    "); // Printing a tab space for indentation.
-		}
-		System.out.print("←");
-		System.out.println(endElement.getName());
 	}
 }
