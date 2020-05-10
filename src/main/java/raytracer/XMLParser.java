@@ -19,12 +19,11 @@ public class XMLParser {
 	}
 
 	public void enter(StartElement startElement) {
-		//TODO Implementation
+		System.out.println(startElement.getName());
 	}
 
 	public void exit(EndElement endElement) {
-		//TODO Implementation
-		
+		System.out.println(endElement.getName());
 	}
 
 	public void parse() throws FileNotFoundException, XMLStreamException {
