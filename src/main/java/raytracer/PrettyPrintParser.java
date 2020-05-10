@@ -23,11 +23,11 @@ public class PrettyPrintParser extends XMLParser{
 	
 	@Override
 	public void exit(EndElement endElement) {
+		this.depth--;
 		for (int i = 0; i < this.depth; i++) {
 			System.out.print("    ");
 		}
 		System.out.print("←");
 		System.out.println(endElement.getName());
-		this.depth--;
 	}
 }
