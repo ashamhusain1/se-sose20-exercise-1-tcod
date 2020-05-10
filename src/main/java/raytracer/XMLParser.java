@@ -40,6 +40,7 @@ public class XMLParser {
 
 	/**
 	 * Method to parse through the file and search opening and closing tags.
+	 * Reference: https://www.baeldung.com/java-stax
 	 * @throws FileNotFoundException
 	 * @throws XMLStreamException
 	 */
