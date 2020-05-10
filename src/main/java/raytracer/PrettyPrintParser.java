@@ -7,17 +7,17 @@ public class PrettyPrintParser extends XMLParser{
 
 	public PrettyPrintParser(String fileName) {
 		super(fileName);
-		// TODO Auto-generated constructor stub
 	}
 	
 	@Override
 	public void enter(StartElement startElement) {
-		//TODO Implementation
+		System.out.print("→");
+		System.out.println(startElement.getName());
 	}
 	
 	@Override
 	public void exit(EndElement endElement) {
-		//TODO implementation
+		System.out.print("←");
+		System.out.println(endElement.getName());
 	}
-
 }
