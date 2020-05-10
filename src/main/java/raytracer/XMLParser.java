@@ -1,5 +1,8 @@
 package raytracer;
 
+import javax.xml.stream.events.EndElement;
+import javax.xml.stream.events.StartElement;
+
 public class XMLParser {
 	
 	String fileName;
@@ -8,11 +11,11 @@ public class XMLParser {
 		this.fileName = fileName;
 	}
 
-	public void enter(String tagName) {
+	public void enter(StartElement startElement) {
 		//TODO Implementation
 	}
 	
-	public void exit(String tagName) {
+	public void exit(EndElement endElement) {
 		//TODO Implementation
 	}
 	
